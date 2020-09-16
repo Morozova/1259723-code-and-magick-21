@@ -181,19 +181,20 @@
 </template>
 
 <script>
-  let fireballSize = 22;
-  let getFireballSpeed = function (isMovingLeft) {
+  const fireballSize = 22;
+  const wizardSpeed = 3;
+  const wizardWidth = 170;
+
+  const getFireballSpeed = function (isMovingLeft) {
     return isMovingLeft ? 2 : 5;
   }
-  let wizardSpeed = 3;
-  let wizardWidth = 70;
-  let getWizardHeight = function () {
-    return 1.337 * wizardWidth;
+  const getWizardHeight = function (width) {
+    return 1.337 * width;
   }
-  let getWizardX = function (gameFieldWidth) {
+  const getWizardX = function (gameFieldWidth) {
     return (gameFieldWidth - wizardWidth) / 2;
   }
-  let getWizardY = function (gameFieldHeight) {
+  const getWizardY = function (gameFieldHeight) {
     return gameFieldHeight / 3;
   }
 </script>
